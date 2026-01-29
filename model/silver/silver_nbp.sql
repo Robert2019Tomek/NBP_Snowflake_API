@@ -1,3 +1,6 @@
+
+
+
 SELECT
     CONCAT(t.DATA_JSON:effectiveDate::DATE ,'_', t.DATA_JSON:tradingDate::DATE ,'_',r.value:code::STRING ) AS UniqueKey,
     t.DATA_JSON:DateEndAPI::DATE               AS date_end_api,

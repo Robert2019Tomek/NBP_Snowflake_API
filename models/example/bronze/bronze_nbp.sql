@@ -1,1 +1,0 @@
-SELECT * FROM {{source('raw','nbp_raw_data')}}
