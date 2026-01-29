@@ -1,0 +1,6 @@
+sources:
+  - name: raw
+    database: NBP  
+    schema: raw  
+    tables:
+      - name: nbp_raw_data
