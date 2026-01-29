@@ -1,8 +1,15 @@
+--https://docs.getdbt.com/docs/build/custom-schemas
 {% macro generate_schema_name(custom_schema_name, node) -%}
-    -- check if the target schema is different to dev to use it
-    {%- if not target.name == 'dev' and custom_schema_name is not none -%}
-        {{ custom_schema_name | trim }}
+
+    {%- set default_schema = target.schema -%}
+    {%- if custom_schema_name is none -%}
+
+        {{ default_schema }}
+
     {%- else -%}
-        {{ target.schema }}
+
+        {{ custom_schema_name | trim }}
+
     {%- endif -%}
+
 {%- endmacro %}

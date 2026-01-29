@@ -1,0 +1,10 @@
+snapshots:
+    - name: fact_nbpep
+      relation: ref('nbpep')
+      config:
+        schema: gold
+        database: NBP
+        unique_key: UNIQUEKEY2
+        strategy: timestamp
+        updated_at: DATETIME_START_LOAD
+        dbt_valid_to_current: "to_date('9999-12-31')"
