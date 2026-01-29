@@ -1,7 +1,7 @@
-name: 'nbp_snowflake_api'
+name: 'NBP_Snowflake_API'
 version: '1.0.0'
 
-profile: 'nbp_snowflake_api'
+profile: 'NBP_Snowflake_API'
 
 model-paths: ["models"]
 analysis-paths: ["analyses"]
@@ -16,7 +16,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 
 models:
-  nbp_snowflake_api:
+  NBP_Snowflake_API:
     bronze:
       +materialized: table
       +schema: bronze
